@@ -24,17 +24,43 @@
             </objects>
             <point key="canvasLocation" x="409" y="1258"/>
         </scene>
-        <!--View Controller-->
+        <!--Random Meal View Controller-->
         <scene sceneID="KzH-bA-fDW">
             <objects>
-                <viewController id="Cc0-cl-Qjf" sceneMemberID="viewController">
+                <viewController id="Cc0-cl-Qjf" customClass="RandomMealViewController" customModule="MealPrepIdeas" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="xNV-FU-XVX">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="wHU-oP-0GR">
+                                <rect key="frame" x="41.5" y="94" width="331" height="331"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="wHU-oP-0GR" secondAttribute="height" multiplier="1:1" id="WHg-Ic-3k4"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VqC-zR-VaY">
+                                <rect key="frame" x="41.5" y="437" width="331" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="Tsb-4A-FuS"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="VqC-zR-VaY" firstAttribute="centerX" secondItem="wHU-oP-0GR" secondAttribute="centerX" id="KSg-gb-bAR"/>
+                            <constraint firstItem="wHU-oP-0GR" firstAttribute="width" secondItem="xNV-FU-XVX" secondAttribute="width" multiplier="0.8" id="Qn4-73-3yu"/>
+                            <constraint firstItem="wHU-oP-0GR" firstAttribute="top" secondItem="Tsb-4A-FuS" secondAttribute="top" constant="50" id="RdK-rz-h6j"/>
+                            <constraint firstItem="wHU-oP-0GR" firstAttribute="centerX" secondItem="Tsb-4A-FuS" secondAttribute="centerX" id="s7y-bV-NaB"/>
+                            <constraint firstItem="VqC-zR-VaY" firstAttribute="top" secondItem="wHU-oP-0GR" secondAttribute="bottom" constant="12" id="tv7-6E-MOs"/>
+                            <constraint firstItem="VqC-zR-VaY" firstAttribute="width" secondItem="wHU-oP-0GR" secondAttribute="width" id="vzy-w9-kJQ"/>
+                        </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" systemItem="featured" id="L1c-DW-oyF"/>
+                    <connections>
+                        <outlet property="mealImageView" destination="wHU-oP-0GR" id="qUw-Z6-xlD"/>
+                        <outlet property="nameLabel" destination="VqC-zR-VaY" id="oiW-pa-3Db"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Fr0-ew-lT9" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>

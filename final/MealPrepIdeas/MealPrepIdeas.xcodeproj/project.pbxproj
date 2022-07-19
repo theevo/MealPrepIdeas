@@ -12,6 +12,7 @@
 		AC12025C2884C9640062E6FB /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AC12025A2884C9640062E6FB /* Main.storyboard */; };
 		AC12025E2884C9660062E6FB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AC12025D2884C9660062E6FB /* Assets.xcassets */; };
 		AC1202612884C9660062E6FB /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AC12025F2884C9660062E6FB /* LaunchScreen.storyboard */; };
+		AC77366A28865A3500EFB331 /* RandomMealViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC77366928865A3500EFB331 /* RandomMealViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +23,7 @@
 		AC12025D2884C9660062E6FB /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		AC1202602884C9660062E6FB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		AC1202622884C9660062E6FB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		AC77366928865A3500EFB331 /* RandomMealViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RandomMealViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -57,6 +59,7 @@
 				AC1202542884C9640062E6FB /* AppDelegate.swift */,
 				AC1202562884C9640062E6FB /* SceneDelegate.swift */,
 				AC12025A2884C9640062E6FB /* Main.storyboard */,
+				AC77366928865A3500EFB331 /* RandomMealViewController.swift */,
 				AC12025D2884C9660062E6FB /* Assets.xcassets */,
 				AC12025F2884C9660062E6FB /* LaunchScreen.storyboard */,
 				AC1202622884C9660062E6FB /* Info.plist */,
@@ -137,6 +140,7 @@
 			files = (
 				AC1202552884C9640062E6FB /* AppDelegate.swift in Sources */,
 				AC1202572884C9640062E6FB /* SceneDelegate.swift in Sources */,
+				AC77366A28865A3500EFB331 /* RandomMealViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
