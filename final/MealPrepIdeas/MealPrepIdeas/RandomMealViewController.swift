@@ -21,6 +21,10 @@ class RandomMealViewController: UIViewController {
         super.viewDidLoad()
     }
     
+    override func viewWillDisappear(_ animated: Bool) {
+        mealImageView.image = nil
+    }
+    
     override func viewWillAppear(_ animated: Bool) {
         TheMealDBApi.getRandomMeal {
             (result) in
@@ -28,6 +32,15 @@ class RandomMealViewController: UIViewController {
             case .success(let meal):
                 DispatchQueue.main.async {
                     self.nameLabel.text = meal.name
+                    
+                    TheMealDBApi.getImageOf(meal: meal) { (result) in
+                        switch result {
+                        case .success(let image):
+                            self.mealImageView.image = image
+                        case .failure(let error):
+                            self.mealImageView.image = UIImage(named: "hamster_ate_your_meal")
+                        }
+                    }
                 }
             case .failure(let error):
                 print(error, error.localizedDescription)
