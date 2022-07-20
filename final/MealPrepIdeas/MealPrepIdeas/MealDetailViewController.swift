@@ -24,6 +24,7 @@ class MealDetailViewController: UIViewController {
         super.viewDidLoad()
         
         nameLabel.text = meal?.name
+        mealImageView.image = mealImage
         mealPrepTextView.text = meal?.mealPrep
     }
 
