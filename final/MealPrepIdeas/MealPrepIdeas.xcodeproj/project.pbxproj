@@ -16,6 +16,7 @@
 		AC77366D28865ECB00EFB331 /* TheMealDBApi.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC77366C28865ECB00EFB331 /* TheMealDBApi.swift */; };
 		AC7736702886649F00EFB331 /* Meal.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC77366F2886649F00EFB331 /* Meal.swift */; };
 		AC7736732886EE3200EFB331 /* TheMealDBApiError.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC7736722886EE3200EFB331 /* TheMealDBApiError.swift */; };
+		AC77369528889A7000EFB331 /* MealDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC77369428889A7000EFB331 /* MealDetailViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,6 +31,7 @@
 		AC77366C28865ECB00EFB331 /* TheMealDBApi.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TheMealDBApi.swift; sourceTree = "<group>"; };
 		AC77366F2886649F00EFB331 /* Meal.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Meal.swift; sourceTree = "<group>"; };
 		AC7736722886EE3200EFB331 /* TheMealDBApiError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TheMealDBApiError.swift; sourceTree = "<group>"; };
+		AC77369428889A7000EFB331 /* MealDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MealDetailViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -68,6 +70,7 @@
 				AC1202542884C9640062E6FB /* AppDelegate.swift */,
 				AC1202562884C9640062E6FB /* SceneDelegate.swift */,
 				AC12025A2884C9640062E6FB /* Main.storyboard */,
+				AC77369428889A7000EFB331 /* MealDetailViewController.swift */,
 				AC77366928865A3500EFB331 /* RandomMealViewController.swift */,
 				AC12025D2884C9660062E6FB /* Assets.xcassets */,
 				AC12025F2884C9660062E6FB /* LaunchScreen.storyboard */,
@@ -176,6 +179,7 @@
 				AC77366D28865ECB00EFB331 /* TheMealDBApi.swift in Sources */,
 				AC1202572884C9640062E6FB /* SceneDelegate.swift in Sources */,
 				AC77366A28865A3500EFB331 /* RandomMealViewController.swift in Sources */,
+				AC77369528889A7000EFB331 /* MealDetailViewController.swift in Sources */,
 				AC7736732886EE3200EFB331 /* TheMealDBApiError.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

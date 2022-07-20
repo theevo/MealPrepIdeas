@@ -9,6 +9,10 @@ import UIKit
 
 class RandomMealViewController: UIViewController {
     
+    // MARK: - Properties
+    var meal: Meal?
+    var mealImage: UIImage?
+    
     // MARK: - Outlets
     
     @IBOutlet weak var nameLabel: UILabel!
@@ -19,6 +23,15 @@ class RandomMealViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        let tapGesture = UITapGestureRecognizer(target: self, action: #selector(tapOnMeal))
+
+        nameLabel.addGestureRecognizer(tapGesture)
+        mealImageView.addGestureRecognizer(tapGesture)
+        
+        // make sure imageView can be interacted with by user
+        nameLabel.isUserInteractionEnabled = true
+        mealImageView.isUserInteractionEnabled = true
     }
     
     override func viewWillDisappear(_ animated: Bool) {
@@ -32,12 +45,14 @@ class RandomMealViewController: UIViewController {
             case .success(let meal):
                 DispatchQueue.main.async {
                     self.nameLabel.text = meal.name
+                    self.meal = meal
                     
                     TheMealDBApi.getImageOf(meal: meal) { (result) in
                         switch result {
                         case .success(let image):
                             DispatchQueue.main.async {
                                 self.mealImageView.image = image
+                                self.mealImage = image
                             }
                         case .failure(let error):
                             self.mealImageView.image = UIImage(named: "hamster_ate_your_meal")
@@ -50,15 +65,9 @@ class RandomMealViewController: UIViewController {
             }
         }
     }
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    
+    @objc func tapOnMeal(_: UIGestureRecognizer) {
+        let vc = storyboard?.instantiateViewController(withIdentifier: "MealDetailViewController") as! MealDetailViewController
+        present(vc, animated: true)
     }
-    */
-
 }

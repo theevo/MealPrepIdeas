@@ -64,3 +64,22 @@ struct Meal: Decodable {
 struct MealsResponse: Decodable {
     var meals: [Meal]
 }
+
+extension Meal {
+    var mealPrep: String {
+        var string =
+"""
+Ingredients\n
+case strIngredient1
+case strIngredient2
+case strIngredient3
+case strIngredient4
+case strIngredient5
+case strIngredient6
+case strIngredient7
+case strIngredient8
+case strIngredient9
+"""
+        return string
+    }
+}
