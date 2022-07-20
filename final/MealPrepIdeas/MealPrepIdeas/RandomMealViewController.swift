@@ -36,9 +36,12 @@ class RandomMealViewController: UIViewController {
                     TheMealDBApi.getImageOf(meal: meal) { (result) in
                         switch result {
                         case .success(let image):
-                            self.mealImageView.image = image
+                            DispatchQueue.main.async {
+                                self.mealImageView.image = image
+                            }
                         case .failure(let error):
                             self.mealImageView.image = UIImage(named: "hamster_ate_your_meal")
+                            print(error, error.localizedDescription)
                         }
                     }
                 }
