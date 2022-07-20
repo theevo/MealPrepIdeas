@@ -12,6 +12,7 @@ class MealDetailViewController: UIViewController {
     // MARK: - Properties
     
     var meal: Meal? // landing pad
+    var mealImage: UIImage?
     
     // MARK: - Outlets
     
@@ -22,21 +23,8 @@ class MealDetailViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-//        nameLabel.text = "questionable"
-//        mealPrepTextView.text =
-//"""
-//Ingredients\n
-//case strIngredient1
-//case strIngredient2
-//case strIngredient3
-//case strIngredient4
-//case strIngredient5
-//case strIngredient6
-//case strIngredient7
-//case strIngredient8
-//case strIngredient9
-//"""
-
+        nameLabel.text = meal?.name
+        mealPrepTextView.text = meal?.mealPrep
     }
 
 }

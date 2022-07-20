@@ -68,6 +68,8 @@ class RandomMealViewController: UIViewController {
     
     @objc func tapOnMeal(_: UIGestureRecognizer) {
         let vc = storyboard?.instantiateViewController(withIdentifier: "MealDetailViewController") as! MealDetailViewController
+        vc.meal = meal
+        vc.mealImage = mealImage
         present(vc, animated: true)
     }
 }
