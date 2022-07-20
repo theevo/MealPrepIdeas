@@ -30,6 +30,8 @@ class TheMealDBApi {
                 
                 guard let meal = decodedResponse.meals.first else { return completion(.failure(.badData)) }
                 
+                print(meal)
+                
                 return completion(.success(meal))
             } catch {
                 print(error, error.localizedDescription)
