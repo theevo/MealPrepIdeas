@@ -19,9 +19,21 @@ class RandomMealViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        nameLabel.text = "Meatballs"
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+        TheMealDBApi.getRandomMeal {
+            (result) in
+            switch result {
+            case .success(let meal):
+                DispatchQueue.main.async {
+                    self.nameLabel.text = meal.name
+                }
+            case .failure(let error):
+                print(error, error.localizedDescription)
+            }
+        }
+    }
 
     /*
     // MARK: - Navigation
